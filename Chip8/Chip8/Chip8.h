@@ -43,7 +43,6 @@ class Chip8
 		void OP_8xy5();
 		void OP_8xy6();
 		void OP_8xy7();
-		void OP_8xyE();
 	
 		void OP_8xyE();
 		void OP_9xy0();
