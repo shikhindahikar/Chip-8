@@ -25,6 +25,26 @@ class Chip8
 		Chip8();
 
 		void LoadROM(char const* filename);		//function declaration
+		void OP_NULL();
+		void OP_00E0(); 
+		void OP_00EE();
+		void OP_1nnn();
+		void OP_2nnn();
+		void OP_3xkk();
+		void OP_4xkk();
+		void OP_5xy0();
+		void OP_6xkk();
+		void OP_7xkk();
+		void OP_8xy0();
+		void OP_8xy1();
+		void OP_8xy2();
+		void OP_8xy3();
+		void OP_8xy4();
+		void OP_8xy5();
+		void OP_8xy6();
+		void OP_8xy7();
+		void OP_8xyE();
+	
 		void OP_8xyE();
 		void OP_9xy0();
 		void OP_Annn();
@@ -102,6 +122,182 @@ uint8_t fontset[FONTSET_SIZE] =
 	0xF0, 0x80, 0xF0, 0x80, 0xF0, // E
 	0xF0, 0x80, 0xF0, 0x80, 0x80  // F
 };
+
+void Chip8::OP_NULL() //Do nothing
+{}
+
+void Chip8::OP_00E0() //Clear the display
+{
+	memset(video, 0, sizeof(video));
+}
+
+void Chip8::OP_00EE() //Return from a subroutine
+{
+	--sp;
+	pc = stack[sp];
+}
+
+void Chip8::OP_1nnn() //Jump to location nnn
+{
+	uint16_t address = opcode & 0x0FFFu;
+
+	pc = address;
+}
+
+void Chip8::OP_2nnn() //Call subroutine at nnn.
+
+
+{
+	uint16_t address = opcode & 0x0FFFu;
+
+	stack[sp] = pc;
+	++sp;
+	pc = address;
+}
+
+void Chip8::OP_3xkk() //Skip next instruction if Vx = kk.
+{
+	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
+	uint8_t byte = opcode & 0x00FFu;
+
+	if (registers[Vx] == byte)
+	{
+		pc += 2;
+	}
+}
+
+void Chip8::OP_4xkk() //Skip next instruction if Vx != kk.
+{
+	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
+	uint8_t byte = opcode & 0x00FFu;
+
+	if (registers[Vx] != byte)
+	{
+		pc += 2;
+	}
+}
+
+void Chip8::OP_5xy0() //Skip next instruction if Vx = Vy.
+{
+	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
+	uint8_t Vy = (opcode & 0x00F0u) >> 4u;
+
+	if (registers[Vx] == registers[Vy])
+	{
+		pc += 2;
+	}
+}
+
+void Chip8::OP_6xkk() //Set Vx = kk.
+{
+	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
+	uint8_t byte = opcode & 0x00FFu;
+
+	registers[Vx] = byte;
+}
+
+void Chip8::OP_7xkk() //Set Vx = Vx + kk.
+{
+	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
+	uint8_t byte = opcode & 0x00FFu;
+
+	registers[Vx] += byte;
+}
+
+void Chip8::OP_8xy0()//Set Vx = Vy.
+{
+	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
+	uint8_t Vy = (opcode & 0x00F0u) >> 4u;
+
+	registers[Vx] = registers[Vy];
+}
+
+void Chip8::OP_8xy1() //Set Vx = Vx OR Vy.
+{
+	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
+	uint8_t Vy = (opcode & 0x00F0u) >> 4u;
+
+	registers[Vx] |= registers[Vy];
+}
+
+void Chip8::OP_8xy2() //Set Vx = Vx AND Vy.
+{
+	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
+	uint8_t Vy = (opcode & 0x00F0u) >> 4u;
+
+	registers[Vx] &= registers[Vy];
+}
+
+void Chip8::OP_8xy3() //Set Vx = Vx XOR Vy. 
+{
+	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
+	uint8_t Vy = (opcode & 0x00F0u) >> 4u;
+
+	registers[Vx] ^= registers[Vy];
+}
+
+void Chip8::OP_8xy4() //Add Vx and Vy together
+{
+	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
+	uint8_t Vy = (opcode & 0x00F0u) >> 4u;
+
+	uint16_t sum = registers[Vx] + registers[Vy];
+
+	if (sum > 255U) //if overflow 
+	{
+		registers[0xF] = 1;
+	}
+	else
+	{
+		registers[0xF] = 0;
+	}
+
+	registers[Vx] = sum & 0xFFu;
+}
+
+void Chip8::OP_8xy5() //Vx = Vx - Vy
+{
+	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
+	uint8_t Vy = (opcode & 0x00F0u) >> 4u;
+
+	if (registers[Vx] > registers[Vy])
+	{
+		registers[0xF] = 1;
+	}
+	else
+	{
+		registers[0xF] = 0;
+	}
+
+	registers[Vx] -= registers[Vy];
+}
+
+void Chip8::OP_8xy6()
+{
+	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
+
+	// Save LSB in VF
+	registers[0xF] = (registers[Vx] & 0x1u);
+
+	registers[Vx] >>= 1;
+}
+
+void Chip8::OP_8xy7() //Vx = Vy - Vx
+{
+	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
+	uint8_t Vy = (opcode & 0x00F0u) >> 4u;
+
+	if (registers[Vy] > registers[Vx])
+	{
+		registers[0xF] = 1;
+	}
+	else
+	{
+		registers[0xF] = 0;
+	}
+
+	registers[Vx] = registers[Vy] - registers[Vx];
+}
 
 void Chip8::OP_8xyE()
 {
