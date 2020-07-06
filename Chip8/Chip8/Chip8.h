@@ -65,6 +65,13 @@ class Chip8
 		void OP_Fx33();
 		void OP_Fx55();
 		void OP_Fx65();
+
+		typedef void (Chip8::*Chip8Func)();
+		Chip8Func table[0xF + 1]{ &Chip8::OP_NULL };
+		Chip8Func table0[0xE + 1]{ &Chip8::OP_NULL };
+		Chip8Func table8[0xE + 1]{ &Chip8::OP_NULL };
+		Chip8Func tableE[0xE + 1]{ &Chip8::OP_NULL };
+		Chip8Func tableF[0x65 + 1]{ &Chip8::OP_NULL };
 };
 
 const unsigned int START_ADDRESS = 0x200;
@@ -120,15 +127,6 @@ Chip8::Chip8() : randGen(std::chrono::system_clock::now().time_since_epoch().cou
 	tableF[0x33] = &Chip8::OP_Fx33;
 	tableF[0x55] = &Chip8::OP_Fx55;
 	tableF[0x65] = &Chip8::OP_Fx65;
-
-	
-
-	typedef void (Chip8::*Chip8Func)();
-	Chip8Func table[0xF + 1]{ &Chip8::OP_NULL };
-	Chip8Func table0[0xE + 1]{ &Chip8::OP_NULL };
-	Chip8Func table8[0xE + 1]{ &Chip8::OP_NULL };
-	Chip8Func tableE[0xE + 1]{ &Chip8::OP_NULL };
-	Chip8Func tableF[0x65 + 1]{ &Chip8::OP_NULL };
 
 
 }
