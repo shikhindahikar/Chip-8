@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Chip8.h"
+#include <string> 
 
 int main(int argc, char__ argv)
 {
