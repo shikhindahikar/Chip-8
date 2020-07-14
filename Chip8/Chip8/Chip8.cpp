@@ -5,17 +5,12 @@
 #include "Chip8.h"
 #include <string> 
 
-int main(int argc, char__ argv)
+int main()
 {
-	if (argc != 4)
-	{
-		std::cerr << "Usage: " << argv[0] << " <Scale> <Delay> <ROM>\n";
-		std::exit(EXIT_FAILURE);
-	}
-
-	int videoScale = std::stoi(argv[1]);
-	int cycleDelay = std::stoi(argv[2]);
-	char const* romFilename = argv[3];
+	
+	int videoScale = 10;							//kept default
+	int cycleDelay = 1;								//kept default
+	char const* romFilename = "F:\ROMs\TETRIS.ch8";					//use your path of ROM files
 
 	Platform platform("CHIP-8 Emulator", VIDEO_WIDTH * videoScale, VIDEO_HEIGHT * videoScale, VIDEO_WIDTH, VIDEO_HEIGHT);
 

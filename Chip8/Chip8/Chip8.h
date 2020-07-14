@@ -2,7 +2,18 @@
 #include <fstream>
 #include <chrono>
 #include <random>
+#include <cstdint>
 
+const unsigned int VIDEO_HEIGHT = 32;
+const unsigned int VIDEO_WIDTH = 64;
+
+const unsigned int FONTSET_START_ADDRESS = 0x50;
+
+std::uniform_int_distribution<uint8_t> randByte;
+
+class SDL_Window;
+class SDL_Renderer;
+class SDL_Texture;
 
 class Chip8
 {
@@ -18,6 +29,10 @@ class Chip8
 		uint8_t keypad[16]{};
 		uint32_t video[64 * 32]{};
 		uint16_t opcode;
+
+		Chip8();
+
+		std::default_random_engine randGen;
 
 		void LoadROM(char const* filename);
 		void Cycle();
@@ -648,13 +663,6 @@ void Chip8::OP_Fx65()
 		registers[i] = memory[index + i];
 	}
 }
-
-#include <cstdint>
-
-
-class SDL_Window;
-class SDL_Renderer;
-class SDL_Texture;
 
 
 class Platform
