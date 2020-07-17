@@ -1,0 +1,24 @@
+﻿  Chip8.cpp
+f:\chip-8\chip8-1\chip8-1\chip8.h(90): warning C4091: 'extern ': ignored on left of 'Chip8' when no variable is declared
+f:\chip-8\chip8-1\chip8-1\chip8.h(95): warning C4244: 'argument': conversion from '_Rep' to 'unsigned int', possible loss of data
+          with
+          [
+              _Rep=std::chrono::system_clock::rep
+          ]
+f:\chip-8\chip8-1\chip8-1\platform.h(23): warning C4091: 'extern ': ignored on left of 'Platform' when no variable is declared
+f:\chip-8\chip8-1\chip8-1\chip8.cpp(14): warning C4129: 'R': unrecognized character escape sequence
+f:\chip-8\chip8-1\chip8-1\chip8.cpp(14): warning C4129: 'T': unrecognized character escape sequence
+  Platform.cpp
+f:\chip-8\chip8-1\chip8-1\platform.h(23): warning C4091: 'extern ': ignored on left of 'Platform' when no variable is declared
+c:\development\sdl2\include\sdl_video.h(90): warning C4099: 'SDL_Window': type name first seen using 'class' now seen using 'struct'
+  f:\chip-8\chip8-1\chip8-1\platform.h(6): note: see declaration of 'SDL_Window'
+c:\development\sdl2\include\sdl_render.h(131): warning C4099: 'SDL_Renderer': type name first seen using 'class' now seen using 'struct'
+  f:\chip-8\chip8-1\chip8-1\platform.h(7): note: see declaration of 'SDL_Renderer'
+c:\development\sdl2\include\sdl_render.h(132): warning C4099: 'SDL_Renderer': type name first seen using 'class' now seen using 'struct'
+  c:\development\sdl2\include\sdl_render.h(131): note: see declaration of 'SDL_Renderer'
+c:\development\sdl2\include\sdl_render.h(137): warning C4099: 'SDL_Texture': type name first seen using 'class' now seen using 'struct'
+  f:\chip-8\chip8-1\chip8-1\platform.h(8): note: see declaration of 'SDL_Texture'
+c:\development\sdl2\include\sdl_render.h(138): warning C4099: 'SDL_Texture': type name first seen using 'class' now seen using 'struct'
+  c:\development\sdl2\include\sdl_render.h(137): note: see declaration of 'SDL_Texture'
+  Generating Code...
+  Chip8-1.vcxproj -> F:\Chip-8\Chip8-1\x64\Debug\Chip8.exe

@@ -1,0 +1,60 @@
+﻿Platform.obj : error LNK2005: "public: __thiscall Chip8::Chip8(void)" (??0Chip8@@QAE@XZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::Cycle(void)" (?Cycle@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::LoadROM(char const *)" (?LoadROM@Chip8@@QAEXPBD@Z) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_00E0(void)" (?OP_00E0@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_00EE(void)" (?OP_00EE@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_1nnn(void)" (?OP_1nnn@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_2nnn(void)" (?OP_2nnn@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_3xkk(void)" (?OP_3xkk@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_4xkk(void)" (?OP_4xkk@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_5xy0(void)" (?OP_5xy0@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_6xkk(void)" (?OP_6xkk@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_7xkk(void)" (?OP_7xkk@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_8xy0(void)" (?OP_8xy0@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_8xy1(void)" (?OP_8xy1@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_8xy2(void)" (?OP_8xy2@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_8xy3(void)" (?OP_8xy3@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_8xy4(void)" (?OP_8xy4@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_8xy5(void)" (?OP_8xy5@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_8xy6(void)" (?OP_8xy6@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_8xy7(void)" (?OP_8xy7@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_8xyE(void)" (?OP_8xyE@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_9xy0(void)" (?OP_9xy0@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Annn(void)" (?OP_Annn@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Bnnn(void)" (?OP_Bnnn@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Cxkk(void)" (?OP_Cxkk@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Dxyn(void)" (?OP_Dxyn@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Ex9E(void)" (?OP_Ex9E@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_ExA1(void)" (?OP_ExA1@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Fx07(void)" (?OP_Fx07@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Fx0A(void)" (?OP_Fx0A@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Fx15(void)" (?OP_Fx15@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Fx18(void)" (?OP_Fx18@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Fx1E(void)" (?OP_Fx1E@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Fx29(void)" (?OP_Fx29@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Fx33(void)" (?OP_Fx33@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Fx55(void)" (?OP_Fx55@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_Fx65(void)" (?OP_Fx65@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::OP_NULL(void)" (?OP_NULL@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::Table0(void)" (?Table0@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::Table8(void)" (?Table8@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::TableE(void)" (?TableE@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "public: void __thiscall Chip8::TableF(void)" (?TableF@Chip8@@QAEXXZ) already defined in Chip8.obj
+Platform.obj : error LNK2005: "int randByte" (?randByte@@3HA) already defined in Chip8.obj
+Platform.obj : error LNK2005: "unsigned char * fontset" (?fontset@@3PAEA) already defined in Chip8.obj
+Platform.obj : error LNK2019: unresolved external symbol _SDL_CreateWindow referenced in function "public: __thiscall Platform::Platform(char const *,int,int,int,int)" (??0Platform@@QAE@PBDHHHH@Z)
+Platform.obj : error LNK2019: unresolved external symbol _SDL_DestroyWindow referenced in function "public: __thiscall Platform::~Platform(void)" (??1Platform@@QAE@XZ)
+Platform.obj : error LNK2019: unresolved external symbol _SDL_PollEvent referenced in function "public: bool __thiscall Platform::ProcessInput(unsigned char *)" (?ProcessInput@Platform@@QAE_NPAE@Z)
+Platform.obj : error LNK2019: unresolved external symbol _SDL_CreateRenderer referenced in function "public: __thiscall Platform::Platform(char const *,int,int,int,int)" (??0Platform@@QAE@PBDHHHH@Z)
+Platform.obj : error LNK2019: unresolved external symbol _SDL_CreateTexture referenced in function "public: __thiscall Platform::Platform(char const *,int,int,int,int)" (??0Platform@@QAE@PBDHHHH@Z)
+Platform.obj : error LNK2019: unresolved external symbol _SDL_UpdateTexture referenced in function "public: void __thiscall Platform::Update(void const *,int)" (?Update@Platform@@QAEXPBXH@Z)
+Platform.obj : error LNK2019: unresolved external symbol _SDL_RenderClear referenced in function "public: void __thiscall Platform::Update(void const *,int)" (?Update@Platform@@QAEXPBXH@Z)
+Platform.obj : error LNK2019: unresolved external symbol _SDL_RenderCopy referenced in function "public: void __thiscall Platform::Update(void const *,int)" (?Update@Platform@@QAEXPBXH@Z)
+Platform.obj : error LNK2019: unresolved external symbol _SDL_RenderPresent referenced in function "public: void __thiscall Platform::Update(void const *,int)" (?Update@Platform@@QAEXPBXH@Z)
+Platform.obj : error LNK2019: unresolved external symbol _SDL_DestroyTexture referenced in function "public: __thiscall Platform::~Platform(void)" (??1Platform@@QAE@XZ)
+Platform.obj : error LNK2019: unresolved external symbol _SDL_DestroyRenderer referenced in function "public: __thiscall Platform::~Platform(void)" (??1Platform@@QAE@XZ)
+Platform.obj : error LNK2019: unresolved external symbol _SDL_Init referenced in function "public: __thiscall Platform::Platform(char const *,int,int,int,int)" (??0Platform@@QAE@PBDHHHH@Z)
+Platform.obj : error LNK2019: unresolved external symbol _SDL_Quit referenced in function "public: __thiscall Platform::~Platform(void)" (??1Platform@@QAE@XZ)
+C:\development\SDL2\lib\x64\SDL2.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\development\SDL2\lib\x64\SDL2main.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+F:\Chip-8\Chip8-1\Debug\Chip8.exe : fatal error LNK1120: 13 unresolved externals
