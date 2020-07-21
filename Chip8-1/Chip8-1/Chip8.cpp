@@ -11,7 +11,7 @@ int main(int argc, char** argv)
 
 	int videoScale = 10;							//kept default
 	int cycleDelay = 1;								//kept default
-	char const* romFilename = "F:\ROMs\TETRIS.ch8";					//use your path of ROM files
+	char const* romFilename = "F:\\ROMs\\TICTAC.ch8";					//use your path of ROM files
 
 	Platform platform("CHIP-8 Emulator", VIDEO_WIDTH * videoScale, VIDEO_HEIGHT * videoScale, VIDEO_WIDTH, VIDEO_HEIGHT);
 
