@@ -96,10 +96,7 @@ Chip8::Chip8() : randGen(std::chrono::system_clock::now().time_since_epoch().cou
 {
 	// Initialize PC
 	pc = START_ADDRESS;
-	// Initialize RNG
-	srand((unsigned)time(0));
-	int randomByte;
-	randomByte = (rand() % 255) + 1;
+
 
 	// Set up function pointer table
 	table[0x0] = &Chip8::Table0;
@@ -456,6 +453,11 @@ void Chip8::OP_Cxkk()
 {
 	uint8_t Vx = (opcode & 0x0F00u) >> 8u;
 	uint8_t byte = opcode & 0x00FFu;
+	
+	// Initialize RNG
+	srand((unsigned)time(0));
+	int randByte;
+	randByte = (rand() % 255) + 1;
 
 	registers[Vx] = randByte & byte;
 }
